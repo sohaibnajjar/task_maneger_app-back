@@ -1,30 +1,18 @@
-// const router = require("./routes");
+const router = require("./routes");
 
-// // express
-// const express = require("express");
-// const cors = require("cors");
-
-// // app config
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
-
-// const PORT = 3333;
-
-// // API router
-// app.use("/", router);
-// app.listen(process.env.PORT || PORT, () =>
-//   console.log(`connected on Port ${PORT}`)
-// );
-
+// express
 const express = require("express");
+const cors = require("cors");
+
+// app config
 const app = express();
-const port = 3000;
+app.use(express.json());
+app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+const PORT = 3333;
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+// API router
+app.use("/", router);
+app.listen(process.env.PORT || PORT, () =>
+  console.log(`connected on Port ${PORT}`)
+);
