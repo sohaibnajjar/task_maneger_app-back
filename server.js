@@ -13,6 +13,8 @@ const PORT = 3333;
 
 // API router
 app.use("/", router);
-app.listen(process.env.PORT || PORT, () =>
-  console.log(`connected on Port ${PORT}`)
+app.listen(
+  // process.env.PORT||
+  PORT,
+  () => console.log(`connected on Port ${PORT}`)
 );
