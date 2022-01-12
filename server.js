@@ -9,9 +9,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const PORT = 3333;
+
 // API router
 app.use("/", router);
-const PORT = 3333;
 app.listen(process.env.PORT || PORT, () =>
   console.log(`connected on Port ${PORT}`)
 );
