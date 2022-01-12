@@ -11,5 +11,7 @@ app.use(cors());
 
 // API router
 app.use("/", router);
-
-app.listen(3333, () => console.log("connected"));
+const PORT = 3333;
+app.listen(process.env.PORT || PORT, () =>
+  console.log(`connected on Port ${PORT}`)
+);
