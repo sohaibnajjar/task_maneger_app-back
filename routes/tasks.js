@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Task = require("../models/Task");
+const Task = require("../module/Task");
 const cors = require("cors");
 
 router.use(cors());

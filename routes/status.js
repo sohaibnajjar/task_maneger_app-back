@@ -1,15 +1,21 @@
 const router = require("express").Router();
-const Status = require("../models/Status");
+const Status = require("../module/Status");
 const cors = require("cors");
 
 router.use(cors());
 
-router.get("/list", async (req, res) => {
-  const status = await Status.findAll();
-  if (status.length) {
-    res.json(status);
-  } else {
-    res.json({ msg: "there is no data " });
+router.get("/", async (req, res) => {
+  // const status = await Status.findAll();
+
+  // if (status.length) {
+  //   res.json(status);
+  // } else {
+  //   res.json({ msg: "there is no data" });
+  // }
+  try {
+    res.json("hello");
+  } catch (e) {
+    console.log(e, "hello");
   }
 });
 

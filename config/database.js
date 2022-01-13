@@ -1,9 +1,19 @@
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize("database", "root", "1234", {
-  host: "localhost",
-  dialect: "mysql",
-});
+const sequelize = new Sequelize(
+  "heroku_ee51471cb1e049d",
+  "bfc57ecb4b5abe",
+  "e11f507b",
+  {
+    host: "eu-cdbr-west-02.cleardb.net",
+    dialect: "mysql",
+  }
+);
+
+// const sequelize = new Sequelize("database", "root", "1234", {
+//   host: "localhost",
+//   dialect: "mysql",
+// });
 
 // test database
 
