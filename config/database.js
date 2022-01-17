@@ -15,8 +15,6 @@ const sequelize = new Sequelize(
 //   dialect: "mysql",
 // });
 
-// test database
-
 (async () => {
   await sequelize.sync();
   try {
